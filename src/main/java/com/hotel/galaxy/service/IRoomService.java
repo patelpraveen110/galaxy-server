@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 /**
- * @author Simpson Alfred
+ * @author praveen patel
  */
 
 public interface IRoomService {
@@ -29,5 +29,5 @@ public interface IRoomService {
 
     Optional<Room> getRoomById(Long roomId);
 
-    List<Object> getAvailableRooms(LocalDate checkInDate, LocalDate checkOutDate, String roomType);
+    List<Room> getAvailableRooms(LocalDate checkInDate, LocalDate checkOutDate, String roomType);
 }

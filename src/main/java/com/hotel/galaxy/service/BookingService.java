@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 /**
- * @author Simpson Alfred
+ * @author praveen patel
  */
 
 @Service
@@ -24,7 +24,6 @@ public class BookingService implements IBookingService {
     public List<BookedRoom> getAllBookings() {
         return bookingRepository.findAll();
     }
-
 
     @Override
     public List<BookedRoom> getBookingsByUserEmail(String email) {
@@ -44,7 +43,7 @@ public class BookingService implements IBookingService {
     @Override
     public String saveBooking(Long roomId, BookedRoom bookingRequest) {
         if (bookingRequest.getCheckOutDate().isBefore(bookingRequest.getCheckInDate())){
-            throw new InvalidBookingRequestException("Check-in date must come before check-out date");
+            throw new InvalidBookingRequestException("Check-in date must be before check-out date");
         }
         Room room = roomService.getRoomById(roomId).get();
         List<BookedRoom> existingBookings = room.getBookings();
@@ -87,8 +86,5 @@ public class BookingService implements IBookingService {
                                 && bookingRequest.getCheckOutDate().equals(bookingRequest.getCheckInDate()))
                 );
     }
-
-
-
 
 }
