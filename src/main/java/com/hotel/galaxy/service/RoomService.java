@@ -90,7 +90,7 @@ public class RoomService implements IRoomService {
     }
 
     @Override
-    public List<Object> getAvailableRooms(LocalDate checkInDate, LocalDate checkOutDate, String roomType) {
-        return Collections.singletonList(roomRepository.findAvailableRoomsByDatesAndType(checkInDate, checkOutDate, roomType));
+    public List<Room> getAvailableRooms(LocalDate checkInDate, LocalDate checkOutDate, String roomType) {
+        return roomRepository.findAvailableRoomsByDatesAndType(checkInDate, checkOutDate, roomType);
     }
 }
