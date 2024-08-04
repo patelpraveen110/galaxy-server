@@ -80,6 +80,7 @@ public class RoleService implements IRoleService {
     public Role removeAllUsersFromRole(Long roleId) {
         Optional<Role> role = roleRepository.findById(roleId);
         role.ifPresent(Role::removeAllUsersFromRole);
+//        role.get().removeAllUsersFromRole();
         return roleRepository.save(role.get());
     }
 }
