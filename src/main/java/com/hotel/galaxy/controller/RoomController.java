@@ -25,7 +25,7 @@ import java.util.List;
 import java.util.Optional;
 
 /**
- * @author Simpson Alfred
+ * @author Praveen Patel
  */
 
 @RestController
@@ -121,8 +121,6 @@ public class RoomController {
 //            return ResponseEntity.ok(roomResponses);
 //        }
 //    }
-
-
 
 
     private RoomResponse getRoomResponse(Room room) {
