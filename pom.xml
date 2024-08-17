@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.hotel.galaxy</groupId>
-	<artifactId>Hetel-Galaxy-2.0</artifactId>
+	<artifactId>Hotel-Galaxy-2.0</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Hetel-Galaxy-2.0</name>
+	<name>Hotel-Galaxy-2.0</name>
 	<description>Updating hotel galaxy </description>
 	<url/>
 	<licenses>
